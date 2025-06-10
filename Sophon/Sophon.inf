@@ -4,15 +4,15 @@
 
 [Version]
 Signature   = "$WINDOWS NT$"
-Class       = System ; TODO: specify appropriate Class
-ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Class = System
+ClassGuid = {4d36e97d-e325-11ce-bfc1-08002be10318}  ; TODO: specify appropriate ClassGuid
 Provider    = %ManufacturerName%
 CatalogFile = Sophon.cat
-DriverVer   = ; TODO: set DriverVer in stampinf property pages
+DriverVer   =  ; TODO: set DriverVer in stampinf property pages
 PnpLockdown = 1
 
 [DestinationDirs]
-DefaultDestDir = 13
+DefaultDestDir = 12
 
 [SourceDisksNames]
 1 = %DiskName%,,,""
@@ -25,9 +25,9 @@ Sophon.sys = 1,,
 ;*****************************************
 
 [Manufacturer]
-%ManufacturerName% = Standard,NT$ARCH$.10.0...16299 ; %13% support introduced in build 16299
+%ManufacturerName% = Standard,NT$ARCH$ ; %13% support introduced in build 16299
 
-[Standard.NT$ARCH$.10.0...16299]
+[Standard.NT$ARCH$]
 %Sophon.DeviceDesc% = Sophon_Device, Root\Sophon ; TODO: edit hw-id
 
 [Sophon_Device.NT]
@@ -46,7 +46,7 @@ DisplayName    = %Sophon.SVCDESC%
 ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
 StartType      = 3               ; SERVICE_DEMAND_START
 ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
-ServiceBinary  = %13%\Sophon.sys
+ServiceBinary  = %12%\Sophon.sys
 
 [Sophon_Device.NT.Wdf]
 KmdfService = Sophon, Sophon_wdfsect
@@ -60,3 +60,4 @@ ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufactu
 DiskName = "Sophon Installation Disk"
 Sophon.DeviceDesc = "Sophon Device"
 Sophon.SVCDESC = "Sophon Service"
+ 
